@@ -2,12 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
-t=np.arange(0,4,0.1)
-def invest(n,t):
-    dndt=-n*k*t
+t=np.arange(0,10,0.1)
+def razm_bakt(m,t):
+    dndt=n*k
     return dndt
-n_0=1000
-k=0.08
-solver=odeint(invest,n_0,t)
+n=1
+k=10
+solver=odeint(razm_bakt, n, t)
 plt.plot(t,solver[:,0])
 plt.show
